@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
+    "react-currency-format": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
@@ -14,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean-build": "yarn cache clean && rm -rf node_modules/ && yarn install && yarn build",
+    "clean-start": "yarn cache clean && rm -rf node_modules/ && yarn install && yarn start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +33,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.0.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": "git+https://github.com/tiagocosmai/lua-de-mel.git",
+  "author": "Tiago Cosmai <tiagocosmai@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagocosmai/lua-de-mel/issues"
   }
 }
