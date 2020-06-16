@@ -1,10 +1,34 @@
 import React from 'react';
 import itensToConvert from '../data/'
 import ItemComponent from './item-component'
-import {  Grid, Typography } from '@material-ui/core';
+import { Grid, Typography, Card, CardContent, Box, Avatar } from '@material-ui/core';
+import AmandaETiago from '../data/AmandaETiago.png';
+
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+    },
+    card: {
+        margin: theme.spacing(2),
+        backgroundColor: 'Transparent'
+    },
+    small: {
+        width: theme.spacing(3),
+        height: theme.spacing(3),
+    },
+    large: {
+        width: theme.spacing(17),
+        height: theme.spacing(17),
+    },
+}));
+
 
 export const MyApp = () => {
-
+    const classes = useStyles();
     const [cotacao, setCotacao] = React.useState(0);
     const [render, setRender] = React.useState(false);
 
@@ -50,12 +74,24 @@ export const MyApp = () => {
         <Grid container spacing={2}>
             <Grid item xs={12} sm={12} lg={12} alignItems={"center"} alignContent={"center"} justify={"center"}>
 
-                <Typography variant="h3" >
-                    Amanda e Tiago - Um sonho no chile!
-                    </Typography>
-                <br></br>
-                <Typography variant="h4">Cotações para os pacotes da Lua de Mel!</Typography>
+                <Card className={classes.card}>
+                    <CardContent>
+                        <Grid container spacing={2} direction="row"
+                            justify="center"
+                            alignItems="center" >
+                            <Grid item sm={12} lg={2} style={{ textAlign: "center", display: 'flex' }}>
+                                <Box justifyContent="center"><Avatar style={{ alignSelf: 'center' }} alt={'Amanda e Tiago'} src={AmandaETiago} className={classes.large} /></Box>
+                            </Grid>
+                            <Grid item sm={12} lg={10}>
+                                <Typography variant="h3" >
+                                    Amanda e Tiago - Um sonho no chile!</Typography>
+                                <br></br>
+                                <Typography variant="h4">Cotações para os pacotes da Lua de Mel!</Typography>
+                            </Grid>
 
+                        </Grid>
+                    </CardContent>
+                </Card>
             </Grid>
             {itens.map((item, index) => {
                 return (<ItemComponent key={index} item={item}></ItemComponent>)
