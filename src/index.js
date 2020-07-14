@@ -8,7 +8,8 @@ import "typeface-roboto";
 import "./index.css";
 import { Typography, Link, Container } from '@material-ui/core'
 
-const MyApp = React.lazy(() => import(/* webpackChunkName: "App" */ "./components/index"));
+
+const HoneyMoon = React.lazy(() => import(/* webpackChunkName: "App" */ "./components/honey-moon"));
 
 
 function Copyright() {
@@ -34,7 +35,7 @@ ReactDOM.render(
     >
       <Container maxWidth="lg">
         <div style={{ marginTop: '24px' }} >
-          <MyApp />
+          <HoneyMoon />
           <Copyright />
         </div>
       </Container>
