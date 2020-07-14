@@ -82,6 +82,11 @@ ou
 - 2 diárias na pousada estrada/bento - $560(Castelo Bevenutti - Quarto Duplo c/ banheira) 9.2
 - 2 diárias na pousada estrada/bento - 1100(Casa Valduga - Quarto a definir) 
 - 2 diárias no hotel centro/Bento -  $684(Vinocap - Quarto superior com ar condicionando) 8.4
+
+### Opções 3x3 de hospedagem(2020,5 - A definir)
+
+- 3 diárias na pousada estrada/bento - $780 (Castelo Benvenutti - Quarto Duplo) 9.2
+- 3 diárias no hotel centro/bento - $1240,5(Laghetto Viverone - Quarto Luxo) 8.5
     `;
 
     const Passeios = 
@@ -116,6 +121,9 @@ Total 4x2 Min
 
 Total 4x2 Max
 3473,98
+
+Total 3x3
+2740,48
 
     `;
 
