@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 
 
 export const MyApp = () => {
+    
+
     const classes = useStyles();
     const [cotacao, setCotacao] = React.useState(0);
     const [render, setRender] = React.useState(false);
